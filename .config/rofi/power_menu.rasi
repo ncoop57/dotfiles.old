@@ -1,11 +1,11 @@
 configuration {
 	modi: "run,drun";
 	width: 25;
-/*  lines: 15;*/
-	columns: 1;
+  lines: 3;
+	columns: 3;
 	font: "Iosevka 10";
 /*	bw: 1;*/
-	location: 1;
+	location: 3;
 /*	padding: 5;*/
 	yoffset: 48;
 	xoffset: 16;
@@ -60,9 +60,9 @@ configuration {
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
 /*	display-windowcd: ;*/
-/*	display-run: "Application";*/
+/*	display-run: ;*/
 /*	display-ssh: ;*/
-	display-drun: "Application";
+/*	display-drun: ;*/
 /*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
