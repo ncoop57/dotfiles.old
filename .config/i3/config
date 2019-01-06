@@ -51,6 +51,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# show bash history
+bindsym $mod+Shift+h exec ~/.config/scripts/bash_history.sh
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -119,17 +122,13 @@ bindsym $mod+a focus parent
 set $ws1 "1:1:" 
 set $ws2 "2:2:"
 set $ws3 "3:3:"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-# Assign workspaces:
-#assign [class="Chromium"] $ws1
-#assign [class="Firefox"] $ws3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -163,6 +162,10 @@ exec chromium-browser
 # Workspace - Dev
 assign [class="Code"] $ws3
 exec code
+
+# Workspace - Terminals
+exec --no-startup-id "i3-msg 'workspace \"2:2:\"; append_layout ~/.config/i3/workspace-terms.json'"
+exec ~/.config/scripts/terminal_setup.sh
 
 
 # reload the configuration file
