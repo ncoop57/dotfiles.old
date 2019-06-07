@@ -17,6 +17,9 @@ set $default_gaps_outer 0
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
+# Setup monitors
+exec --no-startup-id $HOME/.config/scripts/monitor_setup.sh
+
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
